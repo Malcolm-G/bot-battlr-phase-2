@@ -1,0 +1,39 @@
+import React,{ useEffect, useState } from "react";
+import '../stylesheets/YourBotArmy.css';
+import BotCard from "./BotCard";
+import MyBotCard from "./MyBotCard";
+
+const API = "https://bot-battlr-db-json.vercel.app/api/bots"
+
+function YourBotArmy({myBots}){
+
+    
+
+
+    const botsList = myBots?.map((bot)=>{
+        return(
+            <MyBotCard
+            key={`botsList`+bot.id}
+            bot={bot}
+            />
+        )
+    })
+
+    return(
+        <div id="my-list" className="container" >
+            <h2>MY CHAMPIONS</h2>
+            <div className="scroll-images d-flex flex-row flex-nowrap row"
+            // onWheel={(e)=>{
+            //     // e.preventDefault();
+            //     e.stopPropagation();
+            //     console.log(e.target)
+            //     e.target.scrollLeft += e.deltaY;
+            // }}
+            >
+                {botsList}
+            </div>
+        </div>
+    )
+}
+
+export default YourBotArmy

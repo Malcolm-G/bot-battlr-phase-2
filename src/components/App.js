@@ -1,13 +1,26 @@
-import logo from '../logo.svg';
+import React,{useState} from 'react';
 import '../stylesheets/App.css';
-import BotList from './BotList';
-import MyList from './MyList';
+import BotCollection from './BotCollection';
+import YourBotArmy from './YourBotArmy';
 
 function App() {
+
+  const [myBots,setMyBots] = useState([]);
+
+  function addMyBot(bot){
+      const newBots = [...myBots,bot];
+      setMyBots(()=>newBots);
+  }
+
   return (
     <div className="container-75">
-      <MyList />
-      <BotList />
+      <YourBotArmy
+      myBots={myBots}
+      addMyBot={addMyBot}
+      />
+      <BotCollection
+      addMyBot={addMyBot}
+      />
     </div>
   );
 }

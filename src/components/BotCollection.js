@@ -1,12 +1,12 @@
 import React,{ useEffect, useState } from "react";
-import '../stylesheets/BotList.css';
+import '../stylesheets/BotCollection.css';
 import BotCard from "./BotCard";
 
 const API = "https://bot-battlr-db-json.vercel.app/api/bots"
 
-function BotList(){
+function BotCollection({addMyBot}){
 
-    const [bots,setBots] = useState([{}]);
+    const [bots,setBots] = useState([]);
     const [fetchStatus,setFetchStatus] = useState("pending");
 
     useEffect(()=>{
@@ -24,12 +24,14 @@ function BotList(){
             <BotCard
             key={`botsList`+bot.id}
             bot={bot}
+            addMyBot={addMyBot}
             />
         )
     })
 
     return(
         <div className="container" >
+            <h2>BOT COLLECTION</h2>
             <div className="row" >
                 {botsList}
             </div>
@@ -37,4 +39,4 @@ function BotList(){
     )
 }
 
-export default BotList
+export default BotCollection

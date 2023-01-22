@@ -1,10 +1,17 @@
 #my-list{
     /* height: 20rem; */
-    background-color: aquamarine;
+    background-color: rgb(117, 117, 117);
     /* position: sticky; */
     /* top: 0; */
     /* z-index: 1; */
+    min-height: 15rem;
 }
 #my-list:after {
     content: '\200b';
 }
+
+.scroll-images{
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
