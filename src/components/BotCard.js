@@ -6,13 +6,7 @@ function BotCard({bot,addMyBot}){
     const [isAdded,setIsAdded] = useState(false);
 
     function cardClicked(){
-        if(!isAdded){
-            addMyBot(bot);
-            setIsAdded(true)
-        }
-        else{
-            alert('Bot already in your army')
-        }
+        addMyBot(bot);
     }
 
     return(

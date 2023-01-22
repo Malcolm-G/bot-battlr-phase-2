@@ -5,16 +5,16 @@ import MyBotCard from "./MyBotCard";
 
 const API = "https://bot-battlr-db-json.vercel.app/api/bots"
 
-function YourBotArmy({myBots}){
+function YourBotArmy({myBots,removeMyBot}){
 
     
-
 
     const botsList = myBots?.map((bot)=>{
         return(
             <MyBotCard
             key={`botsList`+bot.id}
             bot={bot}
+            removeMyBot={removeMyBot}
             />
         )
     })

@@ -1,8 +1,9 @@
 import React,{} from "react";
 
-function MyBotCard({bot}){
+function MyBotCard({bot,removeMyBot}){
 
-    // console.log(bot)
+    
+
     if (bot.length==0){
         return 
     }
@@ -10,7 +11,9 @@ function MyBotCard({bot}){
     return(
 
         // <div className="col-3 p-1 my-2">
-            <div className="card mx-1 mt-2" style={{width:"18rem"}}>
+            <div className="card mx-1 mt-2" style={{width:"18rem"}}
+            onClick={()=>removeMyBot(bot)}
+            >
                 <img src={bot.avatar_url} className="card-img-top "
                 alt={bot.avatar_url}
                 // style={{height:"200px"}}
