@@ -1,28 +1,27 @@
 import React,{ useEffect, useState } from "react";
-import '../stylesheets/MyList.css';
+import '../stylesheets/BotList.css';
 import BotCard from "./BotCard";
-import MyBotCard from "./MyBotCard";
 
 const API = "https://bot-battlr-db-json.vercel.app/api/bots"
 
 function BotList(){
 
-    const [myBots,setMyBots] = useState([{}]);
+    const [bots,setBots] = useState([{}]);
+    const [fetchStatus,setFetchStatus] = useState("pending");
 
     useEffect(()=>{
         fetch(API)
         .then(resp=>resp.json())
         .then(data=>{
-            setMyBots(data.slice(0,10))
-            console.log(data.slice(0,10))
+            setBots(data)
         })
-        console.log("in useeffect")
+        // console.log("in useeffect")
         
     },[])
 
-    const botsList = myBots?.map((bot)=>{
+    const botsList = bots?.map((bot)=>{
         return(
-            <MyBotCard
+            <BotCard
             key={`botsList`+bot.id}
             bot={bot}
             />
@@ -30,8 +29,8 @@ function BotList(){
     })
 
     return(
-        <div id="my-list" className="container-75 sticky-top" >
-            <div className="d-flex flex-row flex-nowrap row" >
+        <div className="container" >
+            <div className="row" >
                 {botsList}
             </div>
         </div>
