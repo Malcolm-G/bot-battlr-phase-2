@@ -20,7 +20,7 @@ function YourBotArmy({myBots,removeMyBot}){
     })
 
     return(
-        <div id="my-list" className="container" >
+        <div id="my-list" className="container mt-4" >
             <h2>MY CHAMPIONS</h2>
             <div className="scroll-images d-flex flex-row flex-nowrap row"
             // onWheel={(e)=>{

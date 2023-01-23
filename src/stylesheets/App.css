@@ -37,6 +37,10 @@
   }
 } */
 
-h2{
+h1,h2{
   text-align: center;
+}
+
+#my-list h2{
+  color: rgb(229, 229, 229);
 }

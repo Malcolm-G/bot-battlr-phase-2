@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import '../stylesheets/App.css';
 import BotCollection from './BotCollection';
+import Navbar from './Navbar';
 import YourBotArmy from './YourBotArmy';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <div className="container-75">
+      <Navbar />
       <YourBotArmy
       myBots={myBots}
       removeMyBot={removeMyBot}
