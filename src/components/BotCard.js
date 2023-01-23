@@ -1,12 +1,18 @@
 import React,{ useState } from "react";
 
-function BotCard({bot,addMyBot}){
+function BotCard({bot,addMyBot,removeMyBot,deleteBot}){
 
     // console.log(bot)
     const [isAdded,setIsAdded] = useState(false);
 
     function cardClicked(){
         addMyBot(bot);
+    }
+
+    function deleteClicked(e){
+        e.stopPropagation()
+        removeMyBot(bot);
+        deleteBot(bot);
     }
 
     return(
@@ -16,6 +22,11 @@ function BotCard({bot,addMyBot}){
             className="card h-100" style={{width:"18rem"}}
             onClick={cardClicked}
             >
+                <div className="card-header" >
+                    <button className="btn btn-danger"
+                    onClick={deleteClicked}
+                    >X</button>
+                </div>
                 <img src={bot.avatar_url} className="card-img-top " alt={bot.avatar_url}/>
                 <div className="card-body">
                     <h5 className="card-title">{bot.name}</h5>

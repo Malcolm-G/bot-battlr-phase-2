@@ -4,7 +4,7 @@ import BotCard from "./BotCard";
 
 const API = "https://bot-battlr-db-json.vercel.app/api/bots"
 
-function BotCollection({addMyBot}){
+function BotCollection({addMyBot,removeMyBot}){
 
     const [bots,setBots] = useState([]);
     const [fetchStatus,setFetchStatus] = useState("pending");
@@ -19,12 +19,24 @@ function BotCollection({addMyBot}){
         
     },[])
 
+    function deleteBot(bot){
+        fetch(`${API}/${bot.id}`,{
+            method:"DELETE"
+        })
+        .then(resp=>resp.json())
+        .then(data=>console.log(data))
+        const newBots = bots.filter((item)=>item.id!==bot.id)
+        setBots(newBots);
+    }
+
     const botsList = bots?.map((bot)=>{
         return(
             <BotCard
             key={`botsList`+bot.id}
             bot={bot}
             addMyBot={addMyBot}
+            removeMyBot={removeMyBot}
+            deleteBot={deleteBot}
             />
         )
     })

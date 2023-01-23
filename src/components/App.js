@@ -29,6 +29,7 @@ function App() {
       />
       <BotCollection
       addMyBot={addMyBot}
+      removeMyBot={removeMyBot}
       />
     </div>
   );
