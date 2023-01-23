@@ -1,7 +1,7 @@
-# Bank of FlatIron
+# Bot Battlr
 
 ## Description
-This project is a web app named **Bank of FlatIron**,an application that fully uses React to create a feature that enables a user to see past transactions,add new transactions,order the transactions alphabetically and even search for a transaction by its description. The app is created to satisfy a project for Moringa School.
+This project is a web app named **Bot Battlr**,an application that fully uses React to create a feature that enables a user to ................ The app is created to satisfy a project for Moringa School.
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
