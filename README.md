@@ -1,7 +1,7 @@
 # Bot Battlr
 
 ## Description
-This project is a web app named **Bot Battlr**,an application that fully uses React to create a feature that enables a user to ................ The app is created to satisfy a project for Moringa School.
+This project is a web app named **Bot Battlr**,an application that fully uses React to create a feature that enables a user to select from a list of bots,and choose the bots that the user would like to fight for them based on the bots' stats. The app is created to satisfy a project for Moringa School.
 
 ## Technologies Used
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -11,16 +11,16 @@ Notable technologies used in this project include:
 
 The JSON server is made accessible by hosting it using vercel, a hosting platform. The db.json is first placed in a seperate repository, in this case that repository is:
 
-        https://github.com/Malcolm-G/flatiron-bank-data/blob/main/db.json
+        https://github.com/Malcolm-G/bot-battlr-db-json
         
 That repository is then deployed using vercel,which allows the db.json to act as an api with api methods like POST,DELETE and PATCH working.
 The api link is:
 
-        https://flatiron-bank-data.vercel.app/
+        https://bot-battlr-db-json.vercel.app/
 
 and the data used in this app is found in the link below:
 
-        https://flatiron-bank-data.vercel.app/api/transactions
+        https://bot-battlr-db-json.vercel.app/api/bots
 
 ## Project Setup
 ### Installation of application
@@ -39,7 +39,7 @@ To use this repo on your machine requires some simple steps
 - Clone the repo into your folder of choice by using the following:
 
 
-        git clone https://github.com/Malcolm-G/wk1-code-challenge-bank-of-flatiron.git
+        git clone https://github.com/Malcolm-G/bot-battlr-phase-2.git
 
 - Change directory to the repo folder:
 
@@ -65,7 +65,7 @@ To use this repo on your machine requires some simple steps
 - Remember to use your username when cloning.
 
 
-        git clone https://github.com/your-username-here/wk1-code-challenge-bank-of-flatiron.git
+        git clone https://github.com/your-username-here/bot-battlr-phase-2.git
 
 ### Running the application
 If you wish to run application from cloned repository:
@@ -75,7 +75,7 @@ If you wish to run application from cloned repository:
 If you wish to access the application without cloning it to your computer,simply follow this simple step:
 - Access the website by going to the following link:
    
-                https://wk1-code-challenge-bank-of-flatiron-p7a5rxkw6-malcolm-g.vercel.app/
+                https://bot-battlr-phase-2-git-main-malcolm-g.vercel.app/
 
 
 ---
