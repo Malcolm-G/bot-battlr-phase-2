@@ -11,8 +11,12 @@ function BotCard({bot,addMyBot,removeMyBot,deleteBot}){
 
     function deleteClicked(e){
         e.stopPropagation()
-        removeMyBot(bot);
-        deleteBot(bot);
+        if(window.confirm('Are you sure you wish to continue with this permanent operation?'))
+        {
+            removeMyBot(bot);
+            deleteBot(bot);
+        }
+        
     }
 
     return(
@@ -22,8 +26,8 @@ function BotCard({bot,addMyBot,removeMyBot,deleteBot}){
             className="card h-100" style={{width:"18rem"}}
             onClick={cardClicked}
             >
-                <div className="card-header" >
-                    <button className="btn btn-danger"
+                <div className="card-header d-flex justify-content-end" >
+                    <button className="btn btn-danger btn-sm"
                     onClick={deleteClicked}
                     >X</button>
                 </div>
