@@ -42,9 +42,9 @@ function BotCollection({addMyBot,removeMyBot}){
     })
 
     return(
-        <div className="container" >
+        <div className="container mt-2 border-3" >
             <h2>BOT COLLECTION</h2>
-            <div className="row" >
+            <div className="row border-0" >
                 {botsList}
             </div>
         </div>
